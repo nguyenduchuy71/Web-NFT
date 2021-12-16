@@ -9,7 +9,6 @@ $green: #198754;
 $teal: #20c997;
 $cyan: #0dcaf0;
 
-$bg-color: #5319e9;
 $white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
@@ -21,8 +20,8 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
-$primary: #1cd8ed;
-$secondary: #2e3b54;
+$primary: #a7a8bc;
+$secondary: #f6f7f9;
 $purple-dark: #9926f0;
 $purple-light: #bb65f5;
 $footer: #151414;
@@ -37,25 +36,6 @@ html {
   scroll-behavior: smooth;
   font-family: "Poppins" sans-serif;
   font-size: 62.5%;
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: $secondary;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: $purple-light;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: $purple-dark;
-  }
 }
 *,
 *:after,
@@ -70,9 +50,15 @@ body {
 .content {
   min-height: 100vh;
   margin-left: 6rem;
-  background-color: #0a090f;
+  background-color: $gray-400;
   font-size: 1.6rem;
   overflow: hidden;
+  padding: 1rem 2rem;
+}
+.data {
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 //IMPORT BOOSTRAP 5
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

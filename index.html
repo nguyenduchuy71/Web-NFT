@@ -14,10 +14,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <title>Huy's NFT</title>
+    <title>Huy's Dashboard</title>
   </head>
   <body>
-    
     <!--SIDEBAR-->
     <div class="sidebar" id="sidebar">
       <i class="fas fa-bars menu" id="menu"></i>
@@ -27,13 +26,19 @@
       <div class="sidebar__menu">
         <ul class="sidebar__list">
           <li class="sidebar__element active">
-            <i class="sidebar__element__icon fas fa-tasks"></i>
+            <i class="fas fa-chart-line"></i>
           </li>
           <li class="sidebar__element">
-            <i class="sidebar__element__icon fas fa-cog"></i>
+            <i class="fas fa-table"></i>
           </li>
           <li class="sidebar__element">
-            <i class="sidebar__element__icon fas fa-images"></i>
+            <i class="far fa-comment-alt"></i>
+          </li>
+          <li class="sidebar__element">
+            <i class="fas fa-cog"></i>
+          </li>
+          <li class="sidebar__element">
+            <i class="fas fa-search"></i>
           </li>
         </ul>
       </div>
@@ -41,428 +46,262 @@
 
     <!--CONTENT-->
     <div class="content">
-      <!--TOP CONTENT-->
-      <div class="top">
-        <div class="top__search">
-          <i class="fas fa-search top__search__icon"></i>
-          <input class="top__search__input" placeholder="Search" />
+      <!--NAVBAR-->
+      <div class="navbar">
+        <div class="navbar__logo">
+          <i class="fas fa-align-left navbar__img"></i>
+          <span class="navbar__title">Dashboard</span>
         </div>
-        <div class="top__money">
-          <i class="fab fa-bitcoin top__money__icon"></i>
-          <span>1,000,000</span>
-        </div>
-        <div class="top__info">
-          <i class="fas fa-wallet top__info__icon"></i>
-          <i class="fas fa-bell top__info__icon"></i>
-          <div class="top__info__user">
-            <img
-              class="top__info__user__img"
-              src="images/users/user1.jpg"
-              alt="avtar"
-            />
-            <div class="top__info__user__detail">
-              <span class="top__info__user__name">Huymagical</span>
-              <i class="fas fa-chevron-down top__info__user__icon"></i>
-            </div>
+        <div class="navbar__options">
+          <div class="navbar__options__list">
+            <i class="fas fa-sun navbar__options__icon"></i>
+            <i class="far fa-bell navbar__options__icon"></i>
+            <i class="fas fa-table navbar__options__icon"></i>
           </div>
         </div>
       </div>
 
-      <!--INTRO CONTENT-->
-      <div class="intro">
-        <div class="intro__info">
-          <img class="intro__img" src="images/main.png" alt="img" />
-          <h1 class="intro__title">One Stop NFT Marketplace</h1>
-          <p class="intro__des">
-            Discover limited-edition digital artworks<br />
-            Create, Sell and Collect yours now!
-          </p>
-          <div class="intro__listbtn">
-            <button class="intro__button">Start Create</button>
-            <button class="intro__button">How it works</button>
+      <div class="d-flex mt-4 data">
+        <!--DETAILS CONTENT-->
+        <div class="details">
+          <div class="details__list">
+            <div class="details__card">
+              <i class="fas fa-globe-americas details__img"></i>
+              <span class="details__title">Visits Total</span>
+              <span class="details__number">1.72K</span>
+            </div>
+            <div class="details__card">
+              <i class="fas fa-file-invoice-dollar details__img"></i>
+              <span class="details__title">Cost Per Click</span>
+              <span class="details__number">$0.71</span>
+            </div>
+            <div class="details__card">
+              <i class="fas fa-balance-scale details__img"></i>
+              <span class="details__title">Engagement Rate</span>
+              <span class="details__number">11%</span>
+            </div>
+          </div>
+          <div class="details__visual">
+            <p class="details__visual__title">Ad Request</p>
+            <p class="details__visual__desc">Earn from advertisering</p>
+            <span class="details__visual__money">$12.500</span>
+            <canvas class="details__visual__canvas" id="mixed-chart"></canvas>
+          </div>
+          <div class="details__market">
+            <div class="details__market__total">
+              <div class="details__market__grow">
+                <p class="details__market__title">Total Market Growth</p>
+                <p class="details__market__desc">Global Market Reach</p>
+                <p class="details__market__money">4.76K</p>
+              </div>
+              <div class="details__market__pie">
+                <span class="details__market__percent">100%</span>
+              </div>
+            </div>
+            <div class="details__market__order">
+              <div class="details__market__head">
+                <p class="details__market__title">Order</p>
+                <i class="fas fa-ellipsis-h details__market__icon"></i>
+              </div>
+              <canvas
+                class="details__market__graph"
+                id="bar-chart-horizontal"
+              ></canvas>
+            </div>
           </div>
         </div>
-        <div class="intro__artist">
-          <h4 class="intro__artist__title">Top Artist</h4>
-          <ul class="intro__artist__list">
-            <li class="intro__artist__element">
-              <div class="intro__artist__details">
-                <span class="intro__artist__number">1.</span>
-                <img
-                  src="./images/users/user6.jpg"
-                  alt="avatar"
-                  class="intro__artist__avatar"
-                />
-                <span class="intro__artist__name">Harry James</span>
+
+        <!--INFO CONTENT-->
+        <div class="info">
+          <div class="info__top">
+            <div class="info__head">
+              <p class="info__title">Shop Profile</p>
+              <i class="fas fa-ellipsis-h info__icon"></i>
+            </div>
+            <div class="info__body">
+              <img src="./images/shop.jpg" alt="shop" class="info__body__img" />
+              <p class="info__body__title">Tokyo Kitchen</p>
+              <p class="info__body__desc">We Serve Shushi</p>
+            </div>
+            <div class="info__foot">
+              <div class="info__foot__list">
+                <div class="info__foot__element">
+                  <div class="info__foot__img">
+                    <i class="info__foot__icon fas fa-user-plus"></i>
+                  </div>
+                  <div class="info__foot__detail">
+                    <span class="info__foot__number">22K</span>
+                    <span class="info__foot__desc">Fowllowers</span>
+                  </div>
+                </div>
+                <div class="info__foot__element">
+                  <div class="info__foot__img dishes">
+                    <i class="info__foot__icon fas fa-utensils"></i>
+                  </div>
+                  <div class="info__foot__detail">
+                    <span class="info__foot__number">200+</span>
+                    <span class="info__foot__desc">Dishes</span>
+                  </div>
+                </div>
+                <div class="info__foot__element">
+                  <div class="info__foot__img orders">
+                    <i class="info__foot__icon fas fa-shopping-bag"></i>
+                  </div>
+                  <div class="info__foot__detail">
+                    <span class="info__foot__number">145</span>
+                    <span class="info__foot__desc">Orders</span>
+                  </div>
+                </div>
               </div>
-              <div class="intro__artist__button">
-                <button class="button">Follow</button>
+            </div>
+          </div>
+          <div class="info__bot">
+            <p class="info__bot__title">Average Engagement Rate</p>
+            <div class="info__bot__list">
+              <div class="info__bot__element">
+                <i class="fab fa-facebook info__bot__icon"></i>
+                <div class="progress info__bot__progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 25%"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    25%
+                  </div>
+                </div>
               </div>
+              <div class="info__bot__element">
+                <i class="fab fa-instagram info__bot__icon"></i>
+                <div class="progress info__bot__progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 50%"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    50%
+                  </div>
+                </div>
+              </div>
+              <div class="info__bot__element">
+                <i class="fab fa-twitter info__bot__icon"></i>
+                <div class="progress info__bot__progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 75%"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    75%
+                  </div>
+                </div>
+              </div>
+              <div class="info__bot__element">
+                <i class="fab fa-linkedin-in info__bot__icon"></i>
+                <div class="progress info__bot__progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 45%"
+                    aria-valuenow="45"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    45%
+                  </div>
+                </div>
+              </div>
+              <div class="info__bot__element">
+                <i class="fab fa-google info__bot__icon"></i>
+                <div class="progress info__bot__progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 80%"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    80%
+                  </div>
+                </div>
+              </div>
+              <div class="info__bot__element">
+                <i class="fab fa-tiktok info__bot__icon"></i>
+                <div class="progress info__bot__progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 86%"
+                    aria-valuenow="86"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    86%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info__buy">
+            <div class="info__buy__details">
+              <p class="info__buy__title">Buy Uko & Get 15% Off</p>
+              <p class="info__buy__desc">
+                Well Disigned Theme to make everything better
+              </p>
+              <button class="info__buy__button">Buy Now</button>
+            </div>
+            <div class="info__buy__bg">
+              <img src="./images/user.jpg" alt="user" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER SECTION-->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <ul class="footer__socials">
+            <li>
+              <a href="https://www.instagram.com/h2k71bt/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </li>
-            <li class="intro__artist__element">
-              <div class="intro__artist__details">
-                <span class="intro__artist__number">2.</span>
-                <img
-                  src="./images/users/user2.jpg"
-                  alt="avatar"
-                  class="intro__artist__avatar"
-                />
-                <span class="intro__artist__name">Kate Harrision</span>
-              </div>
-              <div class="intro__artist__button">
-                <button class="button">Follow</button>
-              </div>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=100034499171734"
+                target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
             </li>
-            <li class="intro__artist__element">
-              <div class="intro__artist__details">
-                <span class="intro__artist__number">3.</span>
-                <img
-                  src="./images/users/user3.jpg"
-                  alt="avatar"
-                  class="intro__artist__avatar"
-                />
-                <span class="intro__artist__name">Rich Potter</span>
-              </div>
-              <div class="intro__artist__button">
-                <button class="button">Follow</button>
-              </div>
+            <li>
+              <a href="https://github.com/nguyenduchuy71" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
             </li>
-            <li class="intro__artist__element">
-              <div class="intro__artist__details">
-                <span class="intro__artist__number">4.</span>
-                <img
-                  src="./images/users/user4.jpg"
-                  alt="avatar"
-                  class="intro__artist__avatar"
-                />
-                <span class="intro__artist__name">Lisa Norman</span>
-              </div>
-              <div class="intro__artist__button">
-                <button class="button">Follow</button>
-              </div>
-            </li>
-            <li class="intro__artist__element">
-              <div class="intro__artist__details">
-                <span class="intro__artist__number">5.</span>
-                <img
-                  src="./images/users/user5.jpg"
-                  alt="avatar"
-                  class="intro__artist__avatar"
-                />
-                <span class="intro__artist__name">John Smith</span>
-              </div>
-              <div class="intro__artist__button">
-                <button class="button">Follow</button>
-              </div>
+            <li>
+              <a
+                target="blank"
+                href="https://www.linkedin.com/in/huy-nguyen-26146a14a/"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </li>
           </ul>
+          <p class="fw-bold">Copyright: Huy @2021</p>
         </div>
       </div>
+    </footer>
 
-      <!--EXPLORE CONTENT-->
-      <div class="explore">
-        <div class="explore__content">
-          <p class="explore__title">Explore</p>
-          <div class="explore__list">
-            <span class="explore__list__name active">Live Action</span>
-            <span class="explore__list__name">Art</span>
-            <span class="explore__list__name">Photography</span>
-            <span class="explore__list__name">Games</span>
-            <span class="explore__list__name">Music</span>
-          </div>
-          <div class="explore__listcard">
-            <div class="explore__card">
-              <div class="explore__card__img">
-                <img src="./images/nft/nft1.jpg" alt="img" />
-              </div>
-              <div class="explore__card__info">
-                <span>Current Bid:</span>
-                <span class="explore__card__price">6,34 ETH</span>
-              </div>
-              <p class="explore__card__title">Water bender</p>
-              <div class="explore__card__listuser">
-                <img
-                  src="./images/users/user1.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user2.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user3.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user4.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user5.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-              </div>
-            </div>
-            <div class="explore__card">
-              <div class="explore__card__img">
-                <img src="./images/nft/nft3.jpg" alt="img" />
-              </div>
-              <div class="explore__card__info">
-                <span>Current Bid:</span>
-                <span class="explore__card__price">6,62 ETH</span>
-              </div>
-              <p class="explore__card__title">Hally</p>
-              <div class="explore__card__listuser">
-                <img
-                  src="./images/users/user1.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user4.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user5.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user6.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-              </div>
-            </div>
-            <div class="explore__card">
-              <div class="explore__card__img">
-                <img src="./images/nft/nft2.jpg" alt="img" />
-              </div>
-              <div class="explore__card__info">
-                <span>Current Bid:</span>
-                <span class="explore__card__price">7,22 ETH</span>
-              </div>
-              <p class="explore__card__title">Abstract</p>
-              <div class="explore__card__listuser">
-                <img
-                  src="./images/users/user1.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-
-                <img
-                  src="./images/users/user4.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user5.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-              </div>
-            </div>
-            <div class="explore__card">
-              <div class="explore__card__img">
-                <img src="./images/nft/nft4.jpg" alt="img" />
-              </div>
-              <div class="explore__card__info">
-                <span>Current Bid:</span>
-                <span class="explore__card__price">8,25 ETH</span>
-              </div>
-              <p class="explore__card__title">Sparkam</p>
-              <div class="explore__card__listuser">
-                <img
-                  src="./images/users/user1.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-
-                <img
-                  src="./images/users/user4.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user5.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-              </div>
-            </div>
-            <div class="explore__card">
-              <div class="explore__card__img">
-                <img src="./images/nft/nft5.jpg" alt="img" />
-              </div>
-              <div class="explore__card__info">
-                <span>Current Bid:</span>
-                <span class="explore__card__price">2,624 ETH</span>
-              </div>
-              <p class="explore__card__title">Paranoia</p>
-              <div class="explore__card__listuser">
-                <img
-                  src="./images/users/user1.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-
-                <img
-                  src="./images/users/user4.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user5.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-              </div>
-            </div>
-            <div class="explore__card">
-              <div class="explore__card__img">
-                <img src="./images/nft/nft6.jpg" alt="img" />
-              </div>
-              <div class="explore__card__info">
-                <span>Current Bid:</span>
-                <span class="explore__card__price">6,52 ETH</span>
-              </div>
-              <p class="explore__card__title">Wondershall</p>
-              <div class="explore__card__listuser">
-                <img
-                  src="./images/users/user1.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-
-                <img
-                  src="./images/users/user4.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-                <img
-                  src="./images/users/user5.jpg"
-                  alt="img"
-                  class="explore__card__user"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="explore__activiti">
-          <p class="explore__activiti__title">Recent Activity</p>
-          <div class="explore__activiti__list">
-            <div class="explore__activiti__item">
-              <img
-                src="./images/users/user2.jpg"
-                alt="img"
-                class="explore__activiti__img"
-              />
-              <div class="explore__activiti__info">
-                <span class="explore__activiti__name">Kate Harrision </span>
-                <span class="explore__activiti__action"
-                  >Purchaseed by you for 0,5 ETH
-                </span>
-              </div>
-            </div>
-            <div class="explore__activiti__item">
-              <img
-                src="./images/users/user3.jpg"
-                alt="img"
-                class="explore__activiti__img"
-              />
-              <div class="explore__activiti__info">
-                <span class="explore__activiti__name">Jack Smith</span>
-                <span class="explore__activiti__action"
-                  >Purchaseed by you for 1,2 ETH
-                </span>
-              </div>
-            </div>
-            <div class="explore__activiti__item">
-              <img
-                src="./images/users/user4.jpg"
-                alt="img"
-                class="explore__activiti__img"
-              />
-              <div class="explore__activiti__info">
-                <span class="explore__activiti__name">Lisa Norman</span>
-                <span class="explore__activiti__action"
-                  >Purchaseed by you for 0,2 ETH
-                </span>
-              </div>
-            </div>
-            <div class="explore__activiti__item">
-              <img
-                src="./images/users/user5.jpg"
-                alt="img"
-                class="explore__activiti__img"
-              />
-              <div class="explore__activiti__info">
-                <span class="explore__activiti__name">John Smith</span>
-                <span class="explore__activiti__action"
-                  >Purchaseed by you for 0,5 ETH
-                </span>
-              </div>
-            </div>
-            <div class="explore__activiti__item">
-              <img
-                src="./images/users/user6.jpg"
-                alt="img"
-                class="explore__activiti__img"
-              />
-              <div class="explore__activiti__info">
-                <span class="explore__activiti__name">Harry James</span>
-                <span class="explore__activiti__action"
-                  >Purchaseed by you for 0,8 ETH
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--FOOTER SECTION-->
-      <footer id="footer" class="footer">
-        <div class="container">
-          <div class="row">
-            <ul class="footer__socials">
-              <li>
-                <a href="https://www.instagram.com/h2k71bt/" target="_blank"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100034499171734"
-                  target="_blank"
-                  ><i class="fab fa-facebook"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://github.com/nguyenduchuy71" target="_blank"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  target="blank"
-                  href="https://www.linkedin.com/in/huy-nguyen-26146a14a/"
-                  target="_blank"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </li>
-            </ul>
-            <p class="fw-bold">Copyright: Huy @2021</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
