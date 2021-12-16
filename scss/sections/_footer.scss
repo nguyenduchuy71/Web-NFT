@@ -1,0 +1,34 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.footer {
+  padding-top: 1rem;
+  background-color: $footer;
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      cursor: pointer;
+      margin-left: 1rem;
+      list-style-type: none;
+      i {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+        color: $gray-600;
+        transition: transform 0.2s linear;
+        &:hover {
+          color: $purple-dark;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  p {
+    margin-top: -1rem;
+    text-align: center;
+    color: $gray-600;
+    cursor: default;
+  }
+}

@@ -1,0 +1,19 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.btn-rounded {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  margin: 0;
+  border: 0.2rem solid rgba($white, 0.6);
+  background-color: $secondary;
+  transition: transform 0.2s linear;
+  &:hover {
+    background-color: $primary;
+    transform: scale(1.04);
+  }
+}

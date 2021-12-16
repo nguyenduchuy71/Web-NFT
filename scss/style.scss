@@ -1,0 +1,15 @@
+@use "custom";
+
+//IMPORT THE COMPONENTS
+
+@use "components/animations";
+@use "components/button";
+@use "components/mixins";
+@use "components/typography";
+
+//IMPORT THE COMPONENTS
+@use "sections/sidebar";
+@use "sections/top";
+@use "sections/intro";
+@use "sections/explore";
+@use "sections/footer";

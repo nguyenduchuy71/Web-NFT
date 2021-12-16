@@ -1,0 +1,19 @@
+//Gradient mixin
+@use "../custom" as *;
+@mixin gradient {
+  background: linear-gradient(
+    to left,
+    rgba($purple-dark, 0.9),
+    rgba($purple-light, 0.9)
+  );
+}
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin transitionProperty {
+  transition-duration: 1000ms;
+  transition-property: all;
+}
